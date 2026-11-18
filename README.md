@@ -1,5 +1,7 @@
 # discount-uplift
 
+[![tests](https://github.com/niki-kandlikar/discount-uplift/actions/workflows/tests.yml/badge.svg)](https://github.com/niki-kandlikar/discount-uplift/actions/workflows/tests.yml)
+
 Predicting who a discount actually *changes the mind of*, not just who's likely to buy.
 
 ## The problem
@@ -48,7 +50,7 @@ pip install -r requirements.txt
 python scripts/train.py --synthetic     # trains both models, saves the winner
 python scripts/plot_qini.py             # regenerates docs/qini_curve.png
 uvicorn src.api:app --reload            # scoring API on :8000
-pytest tests/                           # 9 tests, ~7s
+pytest tests/                           # 9 tests, ~7s (also run by GitHub Actions on every push)
 ```
 
 ```bash
